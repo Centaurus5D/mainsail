@@ -42,6 +42,7 @@ export const getDefaultState = (): GuiState => {
             enableXYHoming: false,
             feedrateXY: 100,
             stepsXY: [100, 10, 1],
+            stepsAC: [90, 15, 1],
             feedrateZ: 25,
             offsetsZ: [0.005, 0.01, 0.025, 0.05],
             offsetZSaveOption: null,

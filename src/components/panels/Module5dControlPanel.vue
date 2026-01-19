@@ -13,7 +13,7 @@
         <move-to-module-control />
         <!-- AXIS CONTROL -->
         <v-container v-if="axisControlVisible">
-            <component :is="`${controlStyle}-control`" />
+            <component :is="`bars-control`" />
         </v-container>
     </panel>
 </template>
@@ -58,12 +58,6 @@ export default class Module5dControlPanel extends Mixins(BaseMixin, ControlMixin
         if (!this.showControl) return false
 
         return !(this.isPrinting && (this.$store.state.gui.control.hideDuringPrint ?? false))
-    }
-
-    get showButtons() {
-        if (this.controlStyle !== 'bars' && (this.existsZtilt || this.existsQGL)) return true
-
-        return this.existsBedScrews || this.existsBedTilt || this.existsDeltaCalibrate || this.existsScrewsTilt
     }
 
     get showControl(): boolean {

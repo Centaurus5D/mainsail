@@ -118,13 +118,13 @@ export default class Module5dBarsControl extends Mixins(BaseMixin, ControlMixin)
     }
 
     get stepsXYsorted() {
-        return [...this.$store.state.gui.control.stepsXY].sort(function (a, b) {
+        return [...this.$store.state.gui.control.stepsAC].sort(function (a, b) {
             return b - a
         })
     }
 
     get stepsXYsortedReverse() {
-        return [...this.$store.state.gui.control.stepsXY].sort(function (a, b) {
+        return [...this.$store.state.gui.control.stepsAC].sort(function (a, b) {
             return a - b
         })
     }
