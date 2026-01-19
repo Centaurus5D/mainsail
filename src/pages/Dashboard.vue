@@ -97,6 +97,7 @@ import SpoolmanPanel from '@/components/panels/SpoolmanPanel.vue'
 import MmuPanel from '@/components/panels/MmuPanel.vue'
 import StatusPanel from '@/components/panels/StatusPanel.vue'
 import ToolheadControlPanel from '@/components/panels/ToolheadControlPanel.vue'
+import Module5dControlPanel from '@/components/panels/Module5dControlPanel.vue'
 import TemperaturePanel from '@/components/panels/TemperaturePanel.vue'
 import WebcamPanel from '@/components/panels/WebcamPanel.vue'
 
@@ -116,6 +117,7 @@ import WebcamPanel from '@/components/panels/WebcamPanel.vue'
         MmuPanel,
         StatusPanel,
         ToolheadControlPanel,
+        Module5dControlPanel,
         TemperaturePanel,
         WebcamPanel,
     },

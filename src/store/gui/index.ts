@@ -307,6 +307,11 @@ export const getDefaultState = (): GuiState => {
                 showZOffset: true,
                 showSpeedFactor: true,
             },
+            module5d: {
+                showPosition: true,
+                showCoordinates: true,
+                showControl: true,
+            },
             webcam: {
                 currentCam: {
                     dashboard: 'all',

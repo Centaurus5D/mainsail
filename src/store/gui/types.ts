@@ -215,6 +215,11 @@ export interface GuiState {
             showZOffset: boolean
             showSpeedFactor: boolean
         }
+        module5d: {
+            showPosition: boolean
+            showCoordinates: boolean
+            showControl: boolean
+        }
         webcam: {
             currentCam: {
                 dashboard: string

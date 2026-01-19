@@ -110,6 +110,7 @@ export const maxGcodeHistory = 50
 export const allDashboardPanels = [
     'afc',
     'toolhead-control',
+    'module5d-control',
     'extruder-control',
     'macros',
     'led-effects',
