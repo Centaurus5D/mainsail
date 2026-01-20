@@ -20,7 +20,6 @@
 .v-tabs-items,
 .v-data-table,
 .v-input__slot {
-    background-color: inherit !important;
     box-shadow: none !important;
 }
 
