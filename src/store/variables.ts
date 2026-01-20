@@ -182,6 +182,14 @@ export const themes: Theme[] = [
         logo: { show: true, light: false },
     },
     {
+        name: 'steapp',
+        displayName: 'Centaurus 5D',
+        colorLogo: '#0277bd',
+        colorPrimary: '#0277bd',
+        logo: { show: true, light: false },
+        sidebarBackground: { show: true, light: true },
+    },
+    {
         name: 'ldo',
         displayName: 'LDO Motion (Sponsor)',
         colorLogo: '#326799',
