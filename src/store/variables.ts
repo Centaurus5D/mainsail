@@ -188,6 +188,7 @@ export const themes: Theme[] = [
         colorPrimary: '#0277bd',
         logo: { show: true, light: false },
         sidebarBackground: { show: true, light: true },
+        css: true,
     },
     {
         name: 'ldo',

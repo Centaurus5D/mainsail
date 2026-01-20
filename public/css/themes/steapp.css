@@ -1,0 +1,13 @@
+:root .theme--dark {
+    --v-info-base: #d05ce3;
+    --v-warning-base: #FFC107;
+    --v-error-base: #ff867f;
+    --v-success-base: #4CAF50;
+}
+
+:root .theme--light {
+    --v-info-base: #9c27b0;
+    --v-warning-base: #ffc107;
+    --v-error-base: #ff5252;
+    --v-success-base: #4caf50;
+}
