@@ -3,6 +3,7 @@
     --v-warning-base: #FFC107;
     --v-error-base: #ff867f;
     --v-success-base: #4CAF50;
+    --p-border: #3f4143;
 }
 
 :root .theme--light {
@@ -10,4 +11,28 @@
     --v-warning-base: #ffc107;
     --v-error-base: #ff5252;
     --v-success-base: #4caf50;
+    --p-border: #e0e0e0;
+}
+
+.panel-toolbar,
+.v-card,
+.v-tabs-bar,
+.v-tabs-items,
+.v-data-table,
+.v-input__slot {
+    background-color: inherit !important;
+    box-shadow: none !important;
+}
+
+.v-dialog,
+.v-sheet.v-card,
+.v-tooltip__content.menuable__content__active,
+.v-menu__content {
+    border: 1px solid var(--p-border);
+    box-shadow: none !important;
+}
+
+.v-btn,
+.v-chip {
+    box-shadow: none !important;
 }
