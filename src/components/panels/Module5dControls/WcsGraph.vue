@@ -4739,14 +4739,12 @@
                             <v-row dense>
                                 <v-col :class="'col-12'">
                                     <wcs-input
-                                        v-model="offsetsInput[1][0]"
+                                        v-model="aoffsetInput"
                                         :label="$t('Module5d.AoffsetPanel.Headline')"
                                         :suffix="'A'"
                                         :step="0.01"
-                                        :current-pos="wcsOffsets[1][0].toFixed(3)"
-                                        @submit="sendCmd(1, 0)"
-                                        @focus="onFocus(1, 0)"
-                                        @blur="onBlur" />
+                                        :current-pos="homingOffsets[0].toFixed(3)"
+                                        @submit="sendOffset" />
                                 </v-col>
                                 <v-col class="col-12 v-subheader text--secondary mr-2">
                                     <span v-if="!el.is.xsmall" class="text-no-wrap">WCS 1</span>
@@ -4866,6 +4864,15 @@ export default class WcsGraph extends Mixins(BaseMixin, ControlMixin, ThemeMixin
         return this.$store.state.printer.module_5d.wcs_offsets ?? []
     }
 
+    get homingOffsets() {
+        return this.$store.state.printer.module_5d.homing_origin ?? []
+    }
+
+    @Watch('homingOffsets', { immediate: true, deep: true })
+    updateHomingOffsets(newVal: number[]): void {
+        this.aoffsetInput = newVal[0].toFixed(3)
+    }
+
     @Watch('wcsOffsets', { immediate: true, deep: true })
     updateWcsOffsets(newVal: number[][]): void {
         this.offsetsInput = newVal.map((w) => w.map((v) => v.toFixed(3)))
@@ -4919,6 +4926,10 @@ export default class WcsGraph extends Mixins(BaseMixin, ControlMixin, ThemeMixin
 
     sendCmd() {
         console.log(this.offsetsInput)
+    }
+
+    sendOffset() {
+        console.log(this.aoffsetInput)
     }
 }
 </script>
