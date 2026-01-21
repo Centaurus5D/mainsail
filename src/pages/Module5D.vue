@@ -4,6 +4,7 @@
             <template v-if="klipperReadyForGui">
                 <v-col class="col-12 col-md-8 pb-0">
                     <wcs-graph />
+                    <probe-graph />
                 </v-col>
                 <v-col class="col-12 col-md-4">
                     <toolhead-control-panel />
