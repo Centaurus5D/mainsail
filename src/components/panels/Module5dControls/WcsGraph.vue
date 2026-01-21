@@ -20,7 +20,7 @@
                 :loading="loadings.includes('clearWcs')"
                 :title="$t('Module5d.TitleClear')"
                 @click="clearWcs">
-                {{ $t('Module5D.Clear') }}
+                {{ $t('Heightmap.Clear') }}
             </v-btn>
             <v-btn
                 text
