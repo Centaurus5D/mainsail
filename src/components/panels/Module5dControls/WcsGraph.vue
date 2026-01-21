@@ -4826,6 +4826,7 @@
                 </v-col>
             </v-row>
         </v-container>
+        <tool-calibrate-dialog v-model="calibrateDialog" />
     </panel>
 </template>
 
@@ -4835,6 +4836,7 @@ import BaseMixin from '@/components/mixins/base'
 import Panel from '@/components/ui/Panel.vue'
 import Responsive from '@/components/ui/Responsive.vue'
 import WcsInput from '@/components/panels/Module5dControls/WcsInput.vue'
+import ToolCalibrateDialog from '@/components/panels/Module5dControls/ToolCalibrateDialog.vue'
 import { mdiChartLineVariant, mdiHome } from '@mdi/js'
 import ThemeMixin from '@/components/mixins/theme'
 import ControlMixin from '@/components/mixins/control'
@@ -4844,11 +4846,14 @@ import ControlMixin from '@/components/mixins/control'
         Panel,
         WcsInput,
         Responsive,
+        ToolCalibrateDialog,
     },
 })
 export default class WcsGraph extends Mixins(BaseMixin, ControlMixin, ThemeMixin) {
     mdiChartLineVariant = mdiChartLineVariant
     mdiHome = mdiHome
+
+    calibrateDialog = false
     get strokeColor() {
         return this.themeMode === 'dark' ? '#ffffff' : '#000000'
     }
