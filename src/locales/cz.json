@@ -1394,7 +1394,8 @@
       "Headline": "A axis offset"
     },
     "ToolRadius": "Tool radius",
-    "InvalidRadius": "Invalid radius"
+    "InvalidRadius": "Invalid radius",
+    "ErrorKlipperNotReady": "Klipper not ready. Module 5D disabled."
   },
   "Module5D": {
     "Clear": "Clear"

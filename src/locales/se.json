@@ -1240,7 +1240,8 @@
       "Headline": "A Aksela offset"
     },
     "ToolRadius": "Bargoneavvu rádius",
-    "InvalidRadius": "Eahpevuoiggalaš rádius"
+    "InvalidRadius": "Eahpevuoiggalaš rádius",
+    "ErrorKlipperNotReady": "Klipper ii leat gárvvis. \nModula 5D doaibmahehttejuvvon."
   },
   "Module5D": {
     "Clear": "Čielggas"

@@ -1255,7 +1255,8 @@
       "Headline": "A décalage d'axe"
     },
     "ToolRadius": "Rayon d'outil",
-    "InvalidRadius": "Rayon invalide"
+    "InvalidRadius": "Rayon invalide",
+    "ErrorKlipperNotReady": "Clipper n'est pas prêt. \nModule 5D désactivé."
   },
   "Module5D": {
     "Clear": "Clair"

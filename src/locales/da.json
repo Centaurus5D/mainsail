@@ -1326,7 +1326,8 @@
       "Headline": "A akseforskydning"
     },
     "ToolRadius": "Værktøjsradius",
-    "InvalidRadius": "Ugyldig radius"
+    "InvalidRadius": "Ugyldig radius",
+    "ErrorKlipperNotReady": "Klipper ikke klar. \nModul 5D deaktiveret."
   },
   "Module5D": {
     "Clear": "Klar"

@@ -1355,7 +1355,8 @@
       "Headline": "A offset dell'asse"
     },
     "ToolRadius": "Raggio dell'utensile",
-    "InvalidRadius": "Raggio non valido"
+    "InvalidRadius": "Raggio non valido",
+    "ErrorKlipperNotReady": "Klipper non è pronto. \nModulo 5D disabilitato."
   },
   "Module5D": {
     "Clear": "Chiaro"

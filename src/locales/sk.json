@@ -32,7 +32,8 @@
       "Headline": "Odsadenie osi A"
     },
     "ToolRadius": "Polomer nástroja",
-    "InvalidRadius": "Neplatný polomer"
+    "InvalidRadius": "Neplatný polomer",
+    "ErrorKlipperNotReady": "Klipper nie je pripravený. \nModul 5D je vypnutý."
   },
   "Module5D": {
     "Clear": "Jasné"

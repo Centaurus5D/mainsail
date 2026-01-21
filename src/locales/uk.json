@@ -1319,7 +1319,8 @@
       "Headline": "Зміщення осі A"
     },
     "ToolRadius": "Радіус інструменту",
-    "InvalidRadius": "Недійсний радіус"
+    "InvalidRadius": "Недійсний радіус",
+    "ErrorKlipperNotReady": "Кліппер не готовий. \nМодуль 5D вимкнено."
   },
   "Module5D": {
     "Clear": "ясно"

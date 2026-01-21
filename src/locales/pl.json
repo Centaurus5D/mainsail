@@ -1207,7 +1207,8 @@
       "Headline": "Przesunięcie osi A"
     },
     "ToolRadius": "Promień narzędzia",
-    "InvalidRadius": "Nieprawidłowy promień"
+    "InvalidRadius": "Nieprawidłowy promień",
+    "ErrorKlipperNotReady": "Klipper nie jest gotowy. \nModuł 5D wyłączony."
   },
   "Module5D": {
     "Clear": "Jasne"

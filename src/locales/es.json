@@ -1355,7 +1355,8 @@
       "Headline": "A desplazamiento del eje"
     },
     "ToolRadius": "Radio de herramienta",
-    "InvalidRadius": "Radio no válido"
+    "InvalidRadius": "Radio no válido",
+    "ErrorKlipperNotReady": "Klipper no está listo. \nMódulo 5D desactivado."
   },
   "Module5D": {
     "Clear": "Claro"

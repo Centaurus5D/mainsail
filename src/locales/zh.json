@@ -1624,7 +1624,8 @@
       "Headline": "轴偏移 A"
     },
     "ToolRadius": "刀具半径",
-    "InvalidRadius": "半径无效"
+    "InvalidRadius": "半径无效",
+    "ErrorKlipperNotReady": "快艇还没有准备好。\n模块 5D 已禁用。"
   },
   "Module5D": {
     "Clear": "清除"

@@ -1379,7 +1379,8 @@
       "Headline": "Смещение оси A"
     },
     "ToolRadius": "Радиус оснастки",
-    "InvalidRadius": "Неверный радиус"
+    "InvalidRadius": "Неверный радиус",
+    "ErrorKlipperNotReady": "Клиппер не готов. \nМодуль 5D отключен."
   },
   "Module5D": {
     "Clear": "Очистить"

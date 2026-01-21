@@ -1106,7 +1106,8 @@
       "Headline": "축 오프셋 A"
     },
     "ToolRadius": "공구 반경",
-    "InvalidRadius": "잘못된 반경"
+    "InvalidRadius": "잘못된 반경",
+    "ErrorKlipperNotReady": "클리퍼가 준비되지 않았습니다. \n모듈 5D가 비활성화되었습니다."
   },
   "Module5D": {
     "Clear": "분명한"

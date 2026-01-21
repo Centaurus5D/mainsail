@@ -1641,7 +1641,8 @@
       "Headline": "A Achsenversatz"
     },
     "ToolRadius": "Werkzeugradius",
-    "InvalidRadius": "Ungültiger Radius"
+    "InvalidRadius": "Ungültiger Radius",
+    "ErrorKlipperNotReady": "Klipper ist nicht bereit. \nModul 5D deaktiviert."
   },
   "Module5D": {
     "Clear": "Klar"

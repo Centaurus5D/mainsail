@@ -1168,7 +1168,8 @@
       "Headline": "A as-offset"
     },
     "ToolRadius": "Gereedschapsradius",
-    "InvalidRadius": "Ongeldige straal"
+    "InvalidRadius": "Ongeldige straal",
+    "ErrorKlipperNotReady": "Klipper niet klaar. \nModule 5D uitgeschakeld."
   },
   "Module5D": {
     "Clear": "Duidelijk"

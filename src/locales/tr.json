@@ -1165,7 +1165,8 @@
       "Headline": "Bir eksen ofseti A"
     },
     "ToolRadius": "Takım yarıçapı",
-    "InvalidRadius": "Geçersiz yarıçap"
+    "InvalidRadius": "Geçersiz yarıçap",
+    "ErrorKlipperNotReady": "Klipper hazır değil. \nModül 5D devre dışı."
   },
   "Module5D": {
     "Clear": "Temizlemek"

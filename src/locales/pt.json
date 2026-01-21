@@ -1126,7 +1126,8 @@
       "Headline": "deslocamento do A eixo"
     },
     "ToolRadius": "Raio da ferramenta",
-    "InvalidRadius": "Raio inválido"
+    "InvalidRadius": "Raio inválido",
+    "ErrorKlipperNotReady": "Klipper não está pronto. \nMódulo 5D desativado."
   },
   "Module5D": {
     "Clear": "Claro"
