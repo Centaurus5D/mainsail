@@ -21,7 +21,7 @@
                         class="mx-auto mt-6"
                         max-width="500"
                         :icon="mdiLockOutline">
-                        {{ $t('Heightmap.ErrorKlipperNotReady') }}
+                        {{ $t('Module5d.ErrorKlipperNotReady') }}
                     </v-alert>
                 </v-col>
             </template>

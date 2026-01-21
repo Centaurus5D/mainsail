@@ -4614,7 +4614,7 @@
                                                                                     ? primaryColor
                                                                                     : strokeColor,
                                                                         }">
-                                                                        {{ rows[1].X }}
+                                                                        X {{ rows[1].X }}
                                                                     </span>
                                                                     <br />
                                                                     <span
@@ -4625,7 +4625,7 @@
                                                                                     ? primaryColor
                                                                                     : strokeColor,
                                                                         }">
-                                                                        {{ rows[1].Y }}
+                                                                        Y {{ rows[1].Y }}
                                                                     </span>
                                                                     <br />
                                                                     <span
@@ -4636,7 +4636,7 @@
                                                                                     ? primaryColor
                                                                                     : strokeColor,
                                                                         }">
-                                                                        {{ rows[1].Z }}
+                                                                        Z {{ rows[1].Z }}
                                                                     </span>
                                                                 </div>
                                                             </div>
@@ -4690,7 +4690,7 @@
                                                                                     ? primaryColor
                                                                                     : strokeColor,
                                                                         }">
-                                                                        {{ rows[2].X }}
+                                                                        X {{ rows[2].X }}
                                                                     </span>
                                                                     <br />
                                                                     <span
@@ -4701,7 +4701,7 @@
                                                                                     ? primaryColor
                                                                                     : strokeColor,
                                                                         }">
-                                                                        {{ rows[2].Y }}
+                                                                        Y {{ rows[2].Y }}
                                                                     </span>
                                                                     <br />
                                                                     <span
@@ -4712,7 +4712,7 @@
                                                                                     ? primaryColor
                                                                                     : strokeColor,
                                                                         }">
-                                                                        {{ rows[2].Z }}
+                                                                        Z {{ rows[2].Z }}
                                                                     </span>
                                                                 </div>
                                                             </div>
@@ -4889,10 +4889,10 @@ export default class WcsGraph extends Mixins(BaseMixin, ControlMixin, ThemeMixin
 
     get rows() {
         return this.wcsOffsets.map((itm: number[], index: number) => ({
-            WCS: `WCS${index}`,
-            X: `X ${itm[0].toFixed(3)}`,
-            Y: `Y ${itm[1].toFixed(3)}`,
-            Z: `Z ${itm[2].toFixed(3)}`,
+            WCS: index,
+            X: itm[0].toFixed(3),
+            Y: itm[1].toFixed(3),
+            Z: itm[2].toFixed(3),
         }))
     }
 
@@ -4918,18 +4918,30 @@ export default class WcsGraph extends Mixins(BaseMixin, ControlMixin, ThemeMixin
     }
 
     clearWcs(): void {
-        const gcode = 'BED_MESH_CLEAR'
+        const gcode = 'CLEAR_WCS'
 
         this.$store.dispatch('server/addEvent', { message: gcode, type: 'command' })
         this.$socket.emit('printer.gcode.script', { script: gcode }, { loading: 'clearWcs' })
     }
 
     sendCmd() {
-        console.log(this.offsetsInput)
+        for (let wcs_index = 1; wcs_index < 3; wcs_index++) {
+            const wcs = this.offsetsInput[wcs_index]
+            let command = `G10 L2 P${wcs_index + 1}`
+            if (wcs[0] !== this.rows[wcs_index].X) command += ` X${wcs[0]}`
+            if (wcs[1] !== this.rows[wcs_index].Y) command += ` Y${wcs[1]}`
+            if (wcs[2] !== this.rows[wcs_index].Z) command += ` Z${wcs[2]}`
+            this.$store.dispatch('server/addEvent', { message: command, type: 'command' })
+            this.$socket.emit('printer.gcode.script', { script: command })
+        }
     }
 
     sendOffset() {
-        console.log(this.aoffsetInput)
+        if (this.aoffsetInput !== this.homingOffsets[0].toFixed(3)) {
+            const gcode = `SET_GCODE_OFFSET A=${this.aoffsetInput}`
+            this.$store.dispatch('server/addEvent', { message: gcode, type: 'command' })
+            this.$socket.emit('printer.gcode.script', { script: gcode })
+        }
     }
 }
 </script>
