@@ -1254,7 +1254,8 @@
     "AoffsetPanel": {
       "Headline": "A décalage d'axe"
     },
-    "ToolRadius": "Rayon d'outil"
+    "ToolRadius": "Rayon d'outil",
+    "InvalidRadius": "Rayon invalide"
   },
   "Module5D": {
     "Clear": "Clair"

@@ -1125,7 +1125,8 @@
     "AoffsetPanel": {
       "Headline": "deslocamento do A eixo"
     },
-    "ToolRadius": "Raio da ferramenta"
+    "ToolRadius": "Raio da ferramenta",
+    "InvalidRadius": "Raio inválido"
   },
   "Module5D": {
     "Clear": "Claro"

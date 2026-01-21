@@ -1644,7 +1644,8 @@
     "AoffsetPanel": {
       "Headline": "A axis offset"
     },
-    "ToolRadius": "Tool radius"
+    "ToolRadius": "Tool radius",
+    "InvalidRadius": "Invalid radius"
   },
   "Module5D": {
     "Clear": "Clear"

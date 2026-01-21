@@ -1325,7 +1325,8 @@
     "AoffsetPanel": {
       "Headline": "A akseforskydning"
     },
-    "ToolRadius": "Værktøjsradius"
+    "ToolRadius": "Værktøjsradius",
+    "InvalidRadius": "Ugyldig radius"
   },
   "Module5D": {
     "Clear": "Klar"

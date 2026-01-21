@@ -1380,7 +1380,8 @@
     "AoffsetPanel": {
       "Headline": "Tengelyeltolás A"
     },
-    "ToolRadius": "Szerszám sugara"
+    "ToolRadius": "Szerszám sugara",
+    "InvalidRadius": "Érvénytelen sugár"
   },
   "Module5D": {
     "Clear": "Világos"

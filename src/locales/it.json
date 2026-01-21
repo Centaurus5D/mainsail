@@ -1354,7 +1354,8 @@
     "AoffsetPanel": {
       "Headline": "A offset dell'asse"
     },
-    "ToolRadius": "Raggio dell'utensile"
+    "ToolRadius": "Raggio dell'utensile",
+    "InvalidRadius": "Raggio non valido"
   },
   "Module5D": {
     "Clear": "Chiaro"

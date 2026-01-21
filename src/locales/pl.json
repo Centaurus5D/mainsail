@@ -1206,7 +1206,8 @@
     "AoffsetPanel": {
       "Headline": "Przesunięcie osi A"
     },
-    "ToolRadius": "Promień narzędzia"
+    "ToolRadius": "Promień narzędzia",
+    "InvalidRadius": "Nieprawidłowy promień"
   },
   "Module5D": {
     "Clear": "Jasne"

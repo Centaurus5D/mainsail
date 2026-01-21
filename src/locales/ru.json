@@ -1378,7 +1378,8 @@
     "AoffsetPanel": {
       "Headline": "Смещение оси A"
     },
-    "ToolRadius": "Радиус оснастки"
+    "ToolRadius": "Радиус оснастки",
+    "InvalidRadius": "Неверный радиус"
   },
   "Module5D": {
     "Clear": "Очистить"

@@ -1239,7 +1239,8 @@
     "AoffsetPanel": {
       "Headline": "A Aksela offset"
     },
-    "ToolRadius": "Bargoneavvu rádius"
+    "ToolRadius": "Bargoneavvu rádius",
+    "InvalidRadius": "Eahpevuoiggalaš rádius"
   },
   "Module5D": {
     "Clear": "Čielggas"

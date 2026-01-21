@@ -31,7 +31,8 @@
     "AoffsetPanel": {
       "Headline": "Odsadenie osi A"
     },
-    "ToolRadius": "Polomer nástroja"
+    "ToolRadius": "Polomer nástroja",
+    "InvalidRadius": "Neplatný polomer"
   },
   "Module5D": {
     "Clear": "Jasné"

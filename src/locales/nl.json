@@ -1167,7 +1167,8 @@
     "AoffsetPanel": {
       "Headline": "A as-offset"
     },
-    "ToolRadius": "Gereedschapsradius"
+    "ToolRadius": "Gereedschapsradius",
+    "InvalidRadius": "Ongeldige straal"
   },
   "Module5D": {
     "Clear": "Duidelijk"

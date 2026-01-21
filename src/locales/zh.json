@@ -1623,7 +1623,8 @@
     "AoffsetPanel": {
       "Headline": "轴偏移 A"
     },
-    "ToolRadius": "刀具半径"
+    "ToolRadius": "刀具半径",
+    "InvalidRadius": "半径无效"
   },
   "Module5D": {
     "Clear": "清除"

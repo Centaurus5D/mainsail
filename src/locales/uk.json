@@ -1318,7 +1318,8 @@
     "AoffsetPanel": {
       "Headline": "Зміщення осі A"
     },
-    "ToolRadius": "Радіус інструменту"
+    "ToolRadius": "Радіус інструменту",
+    "InvalidRadius": "Недійсний радіус"
   },
   "Module5D": {
     "Clear": "ясно"

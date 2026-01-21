@@ -1354,7 +1354,8 @@
     "AoffsetPanel": {
       "Headline": "A desplazamiento del eje"
     },
-    "ToolRadius": "Radio de herramienta"
+    "ToolRadius": "Radio de herramienta",
+    "InvalidRadius": "Radio no válido"
   },
   "Module5D": {
     "Clear": "Claro"

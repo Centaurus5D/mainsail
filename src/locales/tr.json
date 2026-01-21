@@ -1164,7 +1164,8 @@
     "AoffsetPanel": {
       "Headline": "Bir eksen ofseti A"
     },
-    "ToolRadius": "Takım yarıçapı"
+    "ToolRadius": "Takım yarıçapı",
+    "InvalidRadius": "Geçersiz yarıçap"
   },
   "Module5D": {
     "Clear": "Temizlemek"
