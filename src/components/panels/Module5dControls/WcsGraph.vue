@@ -4747,7 +4747,7 @@
                                         @submit="sendOffset" />
                                 </v-col>
                                 <v-col class="col-12 v-subheader text--secondary mr-2">
-                                    <span v-if="!el.is.xsmall" class="text-no-wrap">WCS 1</span>
+                                    <span class="text-no-wrap">WCS 1</span>
                                 </v-col>
                                 <v-col :class="el.is.xsmall ? 'col-12' : 'col-4'">
                                     <wcs-input
@@ -4762,7 +4762,7 @@
                                 </v-col>
                                 <v-col :class="el.is.xsmall ? 'col-12' : 'col-4'">
                                     <wcs-input
-                                        :value="wcsOffsets[1][1].toFixed(3)"
+                                        v-model="offsetsInput[1][1]"
                                         label="WCS 1"
                                         :suffix="'Y'"
                                         :step="0.01"
@@ -4773,7 +4773,7 @@
                                 </v-col>
                                 <v-col :class="el.is.xsmall ? 'col-12' : 'col-4'">
                                     <wcs-input
-                                        :value="wcsOffsets[1][2].toFixed(3)"
+                                        v-model="offsetsInput[1][1]"
                                         label="WCS 1"
                                         :suffix="'Z'"
                                         :step="0.01"
@@ -4785,11 +4785,11 @@
                             </v-row>
                             <v-row dense>
                                 <v-col class="col-12 v-subheader text--secondary mr-2">
-                                    <span v-if="!el.is.xsmall" class="text-no-wrap">WCS 2</span>
+                                    <span class="text-no-wrap">WCS 2</span>
                                 </v-col>
                                 <v-col :class="el.is.xsmall ? 'col-12' : 'col-4'">
                                     <wcs-input
-                                        :value="wcsOffsets[2][0].toFixed(3)"
+                                        v-model="offsetsInput[2][0]"
                                         label="WCS 2"
                                         :suffix="'X'"
                                         :step="0.01"
@@ -4800,7 +4800,7 @@
                                 </v-col>
                                 <v-col :class="el.is.xsmall ? 'col-12' : 'col-4'">
                                     <wcs-input
-                                        :value="wcsOffsets[2][1].toFixed(3)"
+                                        v-model="offsetsInput[2][1]"
                                         label="WCS 2"
                                         :suffix="'Y'"
                                         :step="0.01"
@@ -4811,7 +4811,7 @@
                                 </v-col>
                                 <v-col :class="el.is.xsmall ? 'col-12' : 'col-4'">
                                     <wcs-input
-                                        :value="wcsOffsets[2][2].toFixed(3)"
+                                        v-model="offsetsInput[2][2]"
                                         label="WCS 2"
                                         :suffix="'Z'"
                                         :step="0.01"

@@ -1190,7 +1190,7 @@
                                         :suffix="'X'"
                                         :step="0.01"
                                         :current-pos="probeOffsets[0].toFixed(3)"
-                                        @submit="sendCmd"
+                                        @submit="sendOffset"
                                         @focus="onFocus(0)"
                                         @blur="onBlur" />
                                 </v-col>
@@ -1201,7 +1201,7 @@
                                         :suffix="'Y'"
                                         :step="0.01"
                                         :current-pos="probeOffsets[1].toFixed(3)"
-                                        @submit="sendCmd"
+                                        @submit="sendOffset"
                                         @focus="onFocus(1)"
                                         @blur="onBlur" />
                                 </v-col>
@@ -1212,7 +1212,7 @@
                                         :suffix="'Z'"
                                         :step="0.01"
                                         :current-pos="probeOffsets[2].toFixed(3)"
-                                        @submit="sendCmd"
+                                        @submit="sendOffset"
                                         @focus="onFocus(2)"
                                         @blur="onBlur" />
                                 </v-col>
@@ -1276,15 +1276,6 @@ export default class ProbeGraph extends Mixins(BaseMixin, ControlMixin, ThemeMix
 
     offsetsInput = ['0', '0', '0']
 
-    get rows() {
-        return this.wcsOffsets.map((itm: number[], index: number) => ({
-            WCS: index,
-            X: itm[0].toFixed(3),
-            Y: itm[1].toFixed(3),
-            Z: itm[2].toFixed(3),
-        }))
-    }
-
     hoveredOffset: number = -1
 
     onFocus(axis: number) {
@@ -1294,38 +1285,16 @@ export default class ProbeGraph extends Mixins(BaseMixin, ControlMixin, ThemeMix
         this.hoveredOffset = -1
     }
 
-    homePrinter(): void {
-        const gcode = 'G28'
-
-        this.$store.dispatch('server/addEvent', { message: gcode, type: 'command' })
-        this.$socket.emit('printer.gcode.script', { script: gcode }, { loading: 'homeAll' })
-    }
-
-    clearWcs(): void {
-        const gcode = 'CLEAR_WCS'
-
-        this.$store.dispatch('server/addEvent', { message: gcode, type: 'command' })
-        this.$socket.emit('printer.gcode.script', { script: gcode }, { loading: 'clearWcs' })
-    }
-
-    sendCmd() {
-        for (let wcs_index = 1; wcs_index < 3; wcs_index++) {
-            const wcs = this.offsetsInput[wcs_index]
-            let command = `G10 L2 P${wcs_index + 1}`
-            if (wcs[0] !== this.rows[wcs_index].X) command += ` X${wcs[0]}`
-            if (wcs[1] !== this.rows[wcs_index].Y) command += ` Y${wcs[1]}`
-            if (wcs[2] !== this.rows[wcs_index].Z) command += ` Z${wcs[2]}`
-            this.$store.dispatch('server/addEvent', { message: command, type: 'command' })
-            this.$socket.emit('printer.gcode.script', { script: command })
-        }
-    }
-
     sendOffset() {
-        if (this.aoffsetInput !== this.homingOffsets[0].toFixed(3)) {
-            const gcode = `SET_GCODE_OFFSET A=${this.aoffsetInput}`
-            this.$store.dispatch('server/addEvent', { message: gcode, type: 'command' })
-            this.$socket.emit('printer.gcode.script', { script: gcode })
+        let command = `SET_PROBE_OFFSET`
+        const axes = ['X', 'Y', 'Z']
+        for (let axis_index = 0; axis_index < 3; axis_index++) {
+            if (this.offsetsInput[axis_index] !== this.probeOffsets[axis_index].toFixed(3)) {
+                command += ` ${axes[axis_index]}=${this.offsetsInput[axis_index]}`
+            }
         }
+        this.$store.dispatch('server/addEvent', { message: command, type: 'command' })
+        this.$socket.emit('printer.gcode.script', { script: command })
     }
 }
 </script>

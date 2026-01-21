@@ -1,7 +1,7 @@
 <template>
     <panel
         v-if="klipperReadyForGui"
-        :icon="mdiGamepad"
+        :icon="mdiNumeric5CircleOutline"
         :title="$t('Panels.Module5dControlPanel.Headline')"
         :collapsible="true"
         card-class="module5d-control-panel">
@@ -25,7 +25,14 @@ import BaseMixin from '../mixins/base'
 import ControlMixin from '@/components/mixins/control'
 import MoveToModuleControl from '@/components/panels/Module5dControls/MoveToModuleControl.vue'
 import Panel from '@/components/ui/Panel.vue'
-import { mdiDotsVertical, mdiEngineOff, mdiGamepad, mdiSpeedometer, mdiMenuDown, mdiRestore } from '@mdi/js'
+import {
+    mdiDotsVertical,
+    mdiEngineOff,
+    mdiNumeric5CircleOutline,
+    mdiSpeedometer,
+    mdiMenuDown,
+    mdiRestore,
+} from '@mdi/js'
 
 @Component({
     components: {
@@ -37,7 +44,7 @@ import { mdiDotsVertical, mdiEngineOff, mdiGamepad, mdiSpeedometer, mdiMenuDown,
 export default class Module5dControlPanel extends Mixins(BaseMixin, ControlMixin) {
     mdiDotsVertical = mdiDotsVertical
     mdiEngineOff = mdiEngineOff
-    mdiGamepad = mdiGamepad
+    mdiNumeric5CircleOutline = mdiNumeric5CircleOutline
     mdiSpeedometer = mdiSpeedometer
     mdiRestore = mdiRestore
     mdiMenuDown = mdiMenuDown
