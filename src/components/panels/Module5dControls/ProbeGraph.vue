@@ -1186,7 +1186,7 @@
                                 <v-col :class="el.is.xsmall ? 'col-12' : 'col-4'">
                                     <wcs-input
                                         v-model="offsetsInput[0]"
-                                        label="Offset"
+                                        label="X"
                                         :suffix="'X'"
                                         :step="0.01"
                                         :current-pos="probeOffsets[0].toFixed(3)"
@@ -1197,7 +1197,7 @@
                                 <v-col :class="el.is.xsmall ? 'col-12' : 'col-4'">
                                     <wcs-input
                                         v-model="offsetsInput[1]"
-                                        label="Offset"
+                                        label="Y"
                                         :suffix="'Y'"
                                         :step="0.01"
                                         :current-pos="probeOffsets[1].toFixed(3)"
@@ -1208,7 +1208,7 @@
                                 <v-col :class="el.is.xsmall ? 'col-12' : 'col-4'">
                                     <wcs-input
                                         v-model="offsetsInput[2]"
-                                        label="Offset"
+                                        label="Z"
                                         :suffix="'Z'"
                                         :step="0.01"
                                         :current-pos="probeOffsets[2].toFixed(3)"
