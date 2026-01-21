@@ -1163,7 +1163,8 @@
     "TitleCalibrate": "Yeni WCS'yi kalibre edin",
     "AoffsetPanel": {
       "Headline": "Bir eksen ofseti A"
-    }
+    },
+    "ToolRadius": "Takım yarıçapı"
   },
   "Module5D": {
     "Clear": "Temizlemek"

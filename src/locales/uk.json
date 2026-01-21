@@ -1317,7 +1317,8 @@
     "TitleCalibrate": "Відкалібруйте новий WCS",
     "AoffsetPanel": {
       "Headline": "Зміщення осі A"
-    }
+    },
+    "ToolRadius": "Радіус інструменту"
   },
   "Module5D": {
     "Clear": "ясно"

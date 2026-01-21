@@ -1166,7 +1166,8 @@
     "TitleCalibrate": "Kalibreer nieuwe WCS",
     "AoffsetPanel": {
       "Headline": "A as-offset"
-    }
+    },
+    "ToolRadius": "Gereedschapsradius"
   },
   "Module5D": {
     "Clear": "Duidelijk"

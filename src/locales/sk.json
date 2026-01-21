@@ -30,7 +30,8 @@
     "TitleCalibrate": "Kalibrujte nové WCS",
     "AoffsetPanel": {
       "Headline": "Odsadenie osi A"
-    }
+    },
+    "ToolRadius": "Polomer nástroja"
   },
   "Module5D": {
     "Clear": "Jasné"

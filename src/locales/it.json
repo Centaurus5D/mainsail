@@ -1353,7 +1353,8 @@
     "TitleCalibrate": "Calibrare il nuovo WCS",
     "AoffsetPanel": {
       "Headline": "A offset dell'asse"
-    }
+    },
+    "ToolRadius": "Raggio dell'utensile"
   },
   "Module5D": {
     "Clear": "Chiaro"

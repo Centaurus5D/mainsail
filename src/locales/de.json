@@ -1639,7 +1639,8 @@
     "TitleCalibrate": "Neues WCS kalibrieren",
     "AoffsetPanel": {
       "Headline": "A Achsenversatz"
-    }
+    },
+    "ToolRadius": "Werkzeugradius"
   },
   "Module5D": {
     "Clear": "Klar"

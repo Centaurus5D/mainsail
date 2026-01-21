@@ -1622,7 +1622,8 @@
     "TitleCalibrate": "校准新的 WCS",
     "AoffsetPanel": {
       "Headline": "轴偏移 A"
-    }
+    },
+    "ToolRadius": "刀具半径"
   },
   "Module5D": {
     "Clear": "清除"

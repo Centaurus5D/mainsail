@@ -1205,7 +1205,8 @@
     "TitleCalibrate": "Skalibruj nowy WCS",
     "AoffsetPanel": {
       "Headline": "Przesunięcie osi A"
-    }
+    },
+    "ToolRadius": "Promień narzędzia"
   },
   "Module5D": {
     "Clear": "Jasne"

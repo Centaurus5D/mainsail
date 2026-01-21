@@ -1379,7 +1379,8 @@
     "TitleCalibrate": "Kalibrálja az új WCS-t",
     "AoffsetPanel": {
       "Headline": "Tengelyeltolás A"
-    }
+    },
+    "ToolRadius": "Szerszám sugara"
   },
   "Module5D": {
     "Clear": "Világos"

@@ -1643,7 +1643,8 @@
     "TitleCalibrate": "Calibrate new WCS",
     "AoffsetPanel": {
       "Headline": "A axis offset"
-    }
+    },
+    "ToolRadius": "Tool radius"
   },
   "Module5D": {
     "Clear": "Clear"

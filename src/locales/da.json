@@ -1324,7 +1324,8 @@
     "TitleCalibrate": "Kalibrer nyt WCS",
     "AoffsetPanel": {
       "Headline": "A akseforskydning"
-    }
+    },
+    "ToolRadius": "Værktøjsradius"
   },
   "Module5D": {
     "Clear": "Klar"

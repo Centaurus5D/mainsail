@@ -1377,7 +1377,8 @@
     "TitleCalibrate": "Калибровка новой WCS",
     "AoffsetPanel": {
       "Headline": "Смещение оси A"
-    }
+    },
+    "ToolRadius": "Радиус оснастки"
   },
   "Module5D": {
     "Clear": "Очистить"

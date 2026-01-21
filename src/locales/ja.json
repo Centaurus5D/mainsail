@@ -1099,7 +1099,8 @@
     "TitleCalibrate": "新しい WCS を校正する",
     "AoffsetPanel": {
       "Headline": "軸オフセット A"
-    }
+    },
+    "ToolRadius": "工具半径"
   },
   "Module5D": {
     "Clear": "クリア"

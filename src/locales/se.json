@@ -1238,7 +1238,8 @@
     "TitleCalibrate": "Kalibreret ođđa WCS",
     "AoffsetPanel": {
       "Headline": "A Aksela offset"
-    }
+    },
+    "ToolRadius": "Bargoneavvu rádius"
   },
   "Module5D": {
     "Clear": "Čielggas"
