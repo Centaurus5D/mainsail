@@ -101,6 +101,11 @@ export const getters: GetterTree<GuiState, any> = {
             allPanels = allPanels.filter((name) => name !== 'mmu')
         }
 
+        // remove module 5d panel
+        if (!rootState.printer?.module_5d) {
+            allPanels = allPanels.filter((name) => name !== 'module5d-control')
+        }
+
         // remove led_effects panel, if no led_effect object exists in Klipper
         const ledEffectsPrefix = 'led_effect '
         const existsLedEffects = Object.keys(rootState.printer ?? {}).some((name) =>

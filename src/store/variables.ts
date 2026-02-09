@@ -110,6 +110,7 @@ export const maxGcodeHistory = 50
 export const allDashboardPanels = [
     'afc',
     'toolhead-control',
+    'module5d-control',
     'extruder-control',
     'macros',
     'led-effects',
@@ -196,6 +197,15 @@ export const themes: Theme[] = [
         displayName: 'Voron Design',
         colorLogo: '#FF2300',
         logo: { show: true, light: false },
+    },
+    {
+        name: 'steapp',
+        displayName: 'Centaurus 5D',
+        colorLogo: '#0277bd',
+        colorPrimary: '#0277bd',
+        logo: { show: true, light: false },
+        sidebarBackground: { show: true, light: true },
+        css: true,
     },
     {
         name: 'ldo',

@@ -25,6 +25,7 @@ export interface GuiState {
         enableXYHoming: boolean
         feedrateXY: number
         stepsXY: number[]
+        stepsAC: number[]
         feedrateZ: number
         offsetsZ: number[]
         offsetZSaveOption: null | 'Z_OFFSET_APPLY_ENDSTOP' | 'Z_OFFSET_APPLY_PROBE'
@@ -214,6 +215,11 @@ export interface GuiState {
             showControl: boolean
             showZOffset: boolean
             showSpeedFactor: boolean
+        }
+        module5d: {
+            showPosition: boolean
+            showCoordinates: boolean
+            showControl: boolean
         }
         webcam: {
             currentCam: {
