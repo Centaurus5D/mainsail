@@ -1107,7 +1107,8 @@
     },
     "ToolRadius": "공구 반경",
     "InvalidRadius": "잘못된 반경",
-    "ErrorKlipperNotReady": "클리퍼가 준비되지 않았습니다. \n모듈 5D가 비활성화되었습니다."
+    "ErrorKlipperNotReady": "클리퍼가 준비되지 않았습니다. \n모듈 5D가 비활성화되었습니다.",
+    "ModuleNotCalibrated": "모듈이 보정되지 않은 것 같습니다. 5D 모듈 보정을 수행하는 것을 잊지 마세요."
   },
   "Module5D": {
     "Clear": "분명한"

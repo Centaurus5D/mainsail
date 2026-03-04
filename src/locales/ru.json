@@ -1380,7 +1380,8 @@
     },
     "ToolRadius": "Радиус оснастки",
     "InvalidRadius": "Неверный радиус",
-    "ErrorKlipperNotReady": "Клиппер не готов. \nМодуль 5D отключен."
+    "ErrorKlipperNotReady": "Клиппер не готов. \nМодуль 5D отключен.",
+    "ModuleNotCalibrated": "Кажется модуль не откалиброван, не забудьте сделать 5D калибровку модуля."
   },
   "Module5D": {
     "Clear": "Очистить"

@@ -1256,7 +1256,8 @@
     },
     "ToolRadius": "Rayon d'outil",
     "InvalidRadius": "Rayon invalide",
-    "ErrorKlipperNotReady": "Clipper n'est pas prêt. \nModule 5D désactivé."
+    "ErrorKlipperNotReady": "Clipper n'est pas prêt. \nModule 5D désactivé.",
+    "ModuleNotCalibrated": "Il semble que le module ne soit pas calibré, n'oubliez pas de faire le calibrage du module 5D"
   },
   "Module5D": {
     "Clear": "Clair"

@@ -1625,7 +1625,8 @@
     },
     "ToolRadius": "刀具半径",
     "InvalidRadius": "半径无效",
-    "ErrorKlipperNotReady": "快艇还没有准备好。\n模块 5D 已禁用。"
+    "ErrorKlipperNotReady": "快艇还没有准备好。\n模块 5D 已禁用。",
+    "ModuleNotCalibrated": "看来模块没有校准，别忘了做5D模块校准"
   },
   "Module5D": {
     "Clear": "清除"

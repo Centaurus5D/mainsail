@@ -1327,7 +1327,8 @@
     },
     "ToolRadius": "Værktøjsradius",
     "InvalidRadius": "Ugyldig radius",
-    "ErrorKlipperNotReady": "Klipper ikke klar. \nModul 5D deaktiveret."
+    "ErrorKlipperNotReady": "Klipper ikke klar. \nModul 5D deaktiveret.",
+    "ModuleNotCalibrated": "Det ser ud til at modulet ikke er kalibreret, glem ikke at lave 5D-modulkalibrering"
   },
   "Module5D": {
     "Clear": "Klar"

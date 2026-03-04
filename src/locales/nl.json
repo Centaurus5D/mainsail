@@ -1169,7 +1169,8 @@
     },
     "ToolRadius": "Gereedschapsradius",
     "InvalidRadius": "Ongeldige straal",
-    "ErrorKlipperNotReady": "Klipper niet klaar. \nModule 5D uitgeschakeld."
+    "ErrorKlipperNotReady": "Klipper niet klaar. \nModule 5D uitgeschakeld.",
+    "ModuleNotCalibrated": "Het lijkt erop dat de module niet is gekalibreerd. Vergeet niet de 5D-module te kalibreren"
   },
   "Module5D": {
     "Clear": "Duidelijk"

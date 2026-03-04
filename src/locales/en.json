@@ -1646,7 +1646,8 @@
     },
     "ToolRadius": "Tool radius",
     "InvalidRadius": "Invalid radius",
-    "ErrorKlipperNotReady": "Klipper not ready. Module 5D disabled."
+    "ErrorKlipperNotReady": "Klipper not ready. Module 5D disabled.",
+    "ModuleNotCalibrated": "It seems module not calibrated, don't forget to make 5D module calibration"
   },
   "Module5D": {
     "Clear": "Clear"

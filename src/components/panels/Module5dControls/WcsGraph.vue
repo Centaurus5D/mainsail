@@ -34,6 +34,11 @@
             </v-btn>
         </template>
         <v-container>
+            <v-row justify="center" v-if="needCalibration">
+                <v-alert dense text type="warning" elevation="2" class="mx-auto mt-6">
+                    {{ $t('Module5d.ModuleNotCalibrated') }}
+                </v-alert>
+            </v-row>
             <v-row justify="center">
                 <v-col cols="12" md="10" lg="6">
                     <svg
@@ -4841,14 +4846,7 @@ import { mdiChartLineVariant, mdiHome } from '@mdi/js'
 import ThemeMixin from '@/components/mixins/theme'
 import ControlMixin from '@/components/mixins/control'
 
-@Component({
-    components: {
-        Panel,
-        WcsInput,
-        Responsive,
-        ToolCalibrateDialog,
-    },
-})
+@Component({ components: { Panel, WcsInput, Responsive, ToolCalibrateDialog } })
 export default class WcsGraph extends Mixins(BaseMixin, ControlMixin, ThemeMixin) {
     mdiChartLineVariant = mdiChartLineVariant
     mdiHome = mdiHome
@@ -4866,11 +4864,19 @@ export default class WcsGraph extends Mixins(BaseMixin, ControlMixin, ThemeMixin
     }
 
     get wcsOffsets() {
-        return this.$store.state.printer.module_5d.wcs_offsets ?? []
+        return (
+            this.$store.state.printer.module_5d.wcs_offsets ?? [
+                [0, 0, 0],
+                [0, 0, 0],
+                [0, 0, 0],
+                [0, 0, 0],
+                [0, 0, 0],
+            ]
+        )
     }
 
     get homingOffsets() {
-        return this.$store.state.printer.module_5d.homing_origin ?? []
+        return this.$store.state.printer.module_5d.homing_origin ?? [0, 0]
     }
 
     @Watch('homingOffsets', { immediate: true, deep: true })
@@ -4901,10 +4907,7 @@ export default class WcsGraph extends Mixins(BaseMixin, ControlMixin, ThemeMixin
         }))
     }
 
-    hoveredOffset: { wcs: number; axis: number } = {
-        wcs: -1,
-        axis: -1,
-    }
+    hoveredOffset: { wcs: number; axis: number } = { wcs: -1, axis: -1 }
 
     onFocus(wcs: number, axis: number) {
         this.hoveredOffset.wcs = wcs
@@ -4947,6 +4950,15 @@ export default class WcsGraph extends Mixins(BaseMixin, ControlMixin, ThemeMixin
             this.$store.dispatch('server/addEvent', { message: gcode, type: 'command' })
             this.$socket.emit('printer.gcode.script', { script: gcode })
         }
+    }
+
+    get needCalibration() {
+        const baseWcs1 = Object.values(this.$store.state.printer.configfile?.settings?.wcs_1) ?? []
+        const baseWcs2 = Object.values(this.$store.state.printer.configfile?.settings?.wcs_2) ?? []
+        return (
+            baseWcs1.every((v, i) => v === this.wcsOffsets[1][i]) ||
+            baseWcs2.every((v, i) => v === this.wcsOffsets[2][i])
+        )
     }
 }
 </script>

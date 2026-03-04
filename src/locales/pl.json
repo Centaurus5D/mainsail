@@ -1208,7 +1208,8 @@
     },
     "ToolRadius": "Promień narzędzia",
     "InvalidRadius": "Nieprawidłowy promień",
-    "ErrorKlipperNotReady": "Klipper nie jest gotowy. \nModuł 5D wyłączony."
+    "ErrorKlipperNotReady": "Klipper nie jest gotowy. \nModuł 5D wyłączony.",
+    "ModuleNotCalibrated": "Wygląda na to, że moduł nie jest skalibrowany. Nie zapomnij wykonać kalibracji modułu 5D"
   },
   "Module5D": {
     "Clear": "Jasne"

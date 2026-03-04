@@ -1237,13 +1237,7 @@ import ControlMixin from '@/components/mixins/control'
 
 type GraphVariant = 'MM' | 'PM' | 'MP' | 'PP'
 
-@Component({
-    components: {
-        Panel,
-        WcsInput,
-        Responsive,
-    },
-})
+@Component({ components: { Panel, WcsInput, Responsive } })
 export default class ProbeGraph extends Mixins(BaseMixin, ControlMixin, ThemeMixin) {
     mdiMoveResize = mdiMoveResize
 
@@ -1266,7 +1260,7 @@ export default class ProbeGraph extends Mixins(BaseMixin, ControlMixin, ThemeMix
     }
 
     get probeOffsets() {
-        return this.$store.state.printer.module_5d_probe.offsets ?? []
+        return this.$store.state.printer.module_5d_probe.offsets ?? [0, 0, 0]
     }
 
     @Watch('probeOffsets', { immediate: true, deep: true })

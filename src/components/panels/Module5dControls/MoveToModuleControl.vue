@@ -8,6 +8,11 @@
                 large: (el) => el.width > 560,
             }">
             <template #default="{ el }">
+                <v-row justify="center" v-if="needCalibration">
+                    <v-alert dense text type="warning" elevation="2" class="mx-2 mt-6">
+                        {{ $t('Module5d.ModuleNotCalibrated') }}
+                    </v-alert>
+                </v-row>
                 <v-row v-if="showPosition" class="flex-nowrap pb-1">
                     <v-col class="col-12 v-subheader text--secondary mr-2">
                         <v-icon small class="mr-1">{{ mdiCrosshairsGps }}</v-icon>
@@ -162,6 +167,27 @@ export default class MoveToModuleControl extends Mixins(BaseMixin, ControlMixin)
         }
 
         return
+    }
+
+    get wcsOffsets() {
+        return (
+            this.$store.state.printer.module_5d.wcs_offsets ?? [
+                [0, 0, 0],
+                [0, 0, 0],
+                [0, 0, 0],
+                [0, 0, 0],
+                [0, 0, 0],
+            ]
+        )
+    }
+
+    get needCalibration() {
+        const baseWcs1 = Object.values(this.$store.state.printer.configfile?.settings?.wcs_1) ?? []
+        const baseWcs2 = Object.values(this.$store.state.printer.configfile?.settings?.wcs_2) ?? []
+        return (
+            baseWcs1.every((v, i) => v === this.wcsOffsets[1][i]) ||
+            baseWcs2.every((v, i) => v === this.wcsOffsets[2][i])
+        )
     }
 }
 </script>

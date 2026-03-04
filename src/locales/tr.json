@@ -1166,7 +1166,8 @@
     },
     "ToolRadius": "Takım yarıçapı",
     "InvalidRadius": "Geçersiz yarıçap",
-    "ErrorKlipperNotReady": "Klipper hazır değil. \nModül 5D devre dışı."
+    "ErrorKlipperNotReady": "Klipper hazır değil. \nModül 5D devre dışı.",
+    "ModuleNotCalibrated": "Modül kalibre edilmemiş görünüyor, 5D modül kalibrasyonunu yapmayı unutmayın"
   },
   "Module5D": {
     "Clear": "Temizlemek"

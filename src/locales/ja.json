@@ -1102,7 +1102,8 @@
     },
     "ToolRadius": "工具半径",
     "InvalidRadius": "無効な半径",
-    "ErrorKlipperNotReady": "クリッパーの準備ができていません。\nモジュール 5D が無効になっています。"
+    "ErrorKlipperNotReady": "クリッパーの準備ができていません。\nモジュール 5D が無効になっています。",
+    "ModuleNotCalibrated": "モジュールがキャリブレーションされていないようです。5D モジュールのキャリブレーションを行うことを忘れないでください"
   },
   "Module5D": {
     "Clear": "クリア"

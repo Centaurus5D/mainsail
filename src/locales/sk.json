@@ -33,7 +33,8 @@
     },
     "ToolRadius": "Polomer nástroja",
     "InvalidRadius": "Neplatný polomer",
-    "ErrorKlipperNotReady": "Klipper nie je pripravený. \nModul 5D je vypnutý."
+    "ErrorKlipperNotReady": "Klipper nie je pripravený. \nModul 5D je vypnutý.",
+    "ModuleNotCalibrated": "Zdá sa, že modul nie je nakalibrovaný, nezabudnite vykonať kalibráciu 5D modulu"
   },
   "Module5D": {
     "Clear": "Jasné"

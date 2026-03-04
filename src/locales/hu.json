@@ -1382,7 +1382,8 @@
     },
     "ToolRadius": "Szerszám sugara",
     "InvalidRadius": "Érvénytelen sugár",
-    "ErrorKlipperNotReady": "Klipper nem áll készen. \nAz 5D modul letiltva."
+    "ErrorKlipperNotReady": "Klipper nem áll készen. \nAz 5D modul letiltva.",
+    "ModuleNotCalibrated": "Úgy tűnik, a modul nincs kalibrálva, ne felejtsd el elvégezni az 5D modul kalibrálását"
   },
   "Module5D": {
     "Clear": "Világos"

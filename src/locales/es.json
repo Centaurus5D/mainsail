@@ -1356,7 +1356,8 @@
     },
     "ToolRadius": "Radio de herramienta",
     "InvalidRadius": "Radio no válido",
-    "ErrorKlipperNotReady": "Klipper no está listo. \nMódulo 5D desactivado."
+    "ErrorKlipperNotReady": "Klipper no está listo. \nMódulo 5D desactivado.",
+    "ModuleNotCalibrated": "Parece que el módulo no está calibrado, no olvide realizar la calibración del módulo 5D."
   },
   "Module5D": {
     "Clear": "Claro"

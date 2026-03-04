@@ -1241,7 +1241,8 @@
     },
     "ToolRadius": "Bargoneavvu rádius",
     "InvalidRadius": "Eahpevuoiggalaš rádius",
-    "ErrorKlipperNotReady": "Klipper ii leat gárvvis. \nModula 5D doaibmahehttejuvvon."
+    "ErrorKlipperNotReady": "Klipper ii leat gárvvis. \nModula 5D doaibmahehttejuvvon.",
+    "ModuleNotCalibrated": "Oaidnit ahte modula ii leat kalibrerejuvvon, it galgga vajálduhttit dahkat 5D-modula kalibrerema"
   },
   "Module5D": {
     "Clear": "Čielggas"
