@@ -8,7 +8,7 @@
                 large: (el) => el.width > 560,
             }">
             <template #default="{ el }">
-                <v-row justify="center" v-if="needCalibration">
+                <v-row v-if="needCalibration" justify="center">
                     <v-alert dense text type="warning" elevation="2" class="mx-2 mt-6">
                         {{ $t('Module5d.ModuleNotCalibrated') }}
                     </v-alert>
@@ -31,7 +31,7 @@
                             :step="0.01"
                             :current-pos="gcodePositions.a"
                             :readonly="['printing'].includes(printer_state)"
-                            :disabled="!xAxisHomed"
+                            :disabled="!aAxisHomed"
                             @submit="sendCmd" />
                     </v-col>
                     <v-col :class="el.is.xsmall ? 'col-12' : 'col-6'">
@@ -42,7 +42,7 @@
                             :step="0.01"
                             :current-pos="gcodePositions.c"
                             :readonly="['printing'].includes(printer_state)"
-                            :disabled="!yAxisHomed"
+                            :disabled="!cAxisHomed"
                             @submit="sendCmd" />
                     </v-col>
                 </v-row>
@@ -78,6 +78,16 @@ export default class MoveToModuleControl extends Mixins(BaseMixin, ControlMixin)
     @Watch('gcodePositions.c', { immediate: true })
     updatePositionC(newVal: string): void {
         this.input.c.pos = newVal
+    }
+
+    get aAxisHomed(): boolean {
+        const homed = this.$store.state.printer.module_5d?.toolhead.homed_axes ?? ""
+        return homed.includes('a')
+    }
+
+    get cAxisHomed(): boolean {
+        const homed = this.$store.state.printer.module_5d?.toolhead.homed_axes ?? ""
+        return homed.includes('c')
     }
 
     /**
@@ -132,26 +142,20 @@ export default class MoveToModuleControl extends Mixins(BaseMixin, ControlMixin)
             gcode.push('G90')
         }
 
-        if (this.input.z.pos !== this.gcodePositions.z) {
-            if (this.existsClientLinearMoveMacro)
-                gcode.push(`_CLIENT_LINEAR_MOVE Z=${this.input.z.pos} F=${this.feedrateZ * 60} ABSOLUTE=1`)
-            else gcode.push(`G1 Z${this.input.z.pos} F${this.feedrateZ * 60}`)
-        }
-
-        if (this.input.x.pos !== this.gcodePositions.x || this.input.y.pos !== this.gcodePositions.y) {
-            let xPos = ''
-            let yPos = ''
+        if (this.input.a.pos !== this.gcodePositions.a || this.input.c.pos !== this.gcodePositions.c) {
+            let aPos = ''
+            let cPos = ''
 
             if (this.existsClientLinearMoveMacro) {
-                if (this.input.x.pos !== this.gcodePositions.x) xPos = ` X=${this.input.x.pos}`
-                if (this.input.y.pos !== this.gcodePositions.y) yPos = ` Y=${this.input.y.pos}`
+                if (this.input.a.pos !== this.gcodePositions.a) aPos = ` A=${this.input.a.pos}`
+                if (this.input.c.pos !== this.gcodePositions.c) cPos = ` C=${this.input.c.pos}`
 
-                gcode.push(`_CLIENT_LINEAR_MOVE${xPos}${yPos} F=${this.feedrateXY * 60} ABSOLUTE=1`)
+                gcode.push(`_CLIENT_LINEAR_MOVE${aPos}${cPos} F=${this.feedrateXY * 60} ABSOLUTE=1`)
             } else {
-                if (this.input.x.pos !== this.gcodePositions.x) xPos = ` X${this.input.x.pos}`
-                if (this.input.y.pos !== this.gcodePositions.y) yPos = ` Y${this.input.y.pos}`
+                if (this.input.a.pos !== this.gcodePositions.a) aPos = ` A${this.input.a.pos}`
+                if (this.input.c.pos !== this.gcodePositions.c) cPos = ` C${this.input.c.pos}`
 
-                gcode.push(`G1${xPos}${yPos} F${this.feedrateXY * 60}`)
+                gcode.push(`G1${aPos}${cPos} F${this.feedrateXY * 60}`)
             }
         }
 
@@ -161,7 +165,7 @@ export default class MoveToModuleControl extends Mixins(BaseMixin, ControlMixin)
 
         const gcodeStr = gcode.join('\n')
 
-        if (this.input.x.valid && this.input.y.valid && this.input.z.valid) {
+        if (this.input.a.valid && this.input.c.valid) {
             this.$store.dispatch('server/addEvent', { message: gcodeStr, type: 'command' })
             this.$socket.emit('printer.gcode.script', { script: gcodeStr })
         }
