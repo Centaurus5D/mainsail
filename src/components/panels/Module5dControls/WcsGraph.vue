@@ -34,7 +34,7 @@
             </v-btn>
         </template>
         <v-container>
-            <v-row justify="center" v-if="needCalibration">
+            <v-row v-if="needCalibration" justify="center">
                 <v-alert dense text type="warning" elevation="2" class="mx-auto mt-6">
                     {{ $t('Module5d.ModuleNotCalibrated') }}
                 </v-alert>
@@ -4778,7 +4778,7 @@
                                 </v-col>
                                 <v-col :class="el.is.xsmall ? 'col-12' : 'col-4'">
                                     <wcs-input
-                                        v-model="offsetsInput[1][1]"
+                                        v-model="offsetsInput[1][2]"
                                         label="WCS 1"
                                         :suffix="'Z'"
                                         :step="0.01"
